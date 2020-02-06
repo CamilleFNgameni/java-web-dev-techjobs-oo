@@ -92,32 +92,32 @@ public class Job {
     public String toString(){
         boolean noData = false;
         String job = "ID: "+getId();
-        if(getName()==null||getName()==""){
+        if(getName()==null|| getName().equals("")){
             job += "\nName: Data not available";
         }else{
             job += "\nName: " + getName();
             noData = true;
         }
 
-        if(getEmployer()==null||getEmployer().equals("")){
+        if(getEmployer()==null||getEmployer().getValue().equals("")){
             job += "\nEmployer: Data not available";
         }else{
             job += "\nEmployer: " + getEmployer();
             noData = true;
         }
-        if(getLocation()==null||getLocation().equals("")){
+        if(getLocation()==null||getLocation().getValue().equals("")){
             job += "\nlocation: Data not available";
         }else{
             job += "\nLocation: " + getLocation();
             noData = true;
         }
-        if(getPositionType()==null||getPositionType().equals("")){
+        if(getPositionType()==null||getPositionType().getValue().equals("")){
             job += "\nPosition Type: Data not available";
         }else{
             job += "\nPosition Type: " + getPositionType();
             noData = true;
         }
-        if(getCoreCompetency()==null||getCoreCompetency().equals("")){
+        if(getCoreCompetency()==null||getCoreCompetency().getValue().equals("")){
             job += "\nCore Competency: Data not available";
         }else{
             job += "\nCore Competency: " + getCoreCompetency();
